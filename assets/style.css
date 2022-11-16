@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    height: 10em;
+    width: 25em;
+    padding: 50px;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    /* background-color: green;
+    border: 1px solid black; */
+}
+
+td{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    height: 50%;
+    margin-bottom: 10px;
+    /* background-color: green;
+    border: 1px solid black;             */
+}
