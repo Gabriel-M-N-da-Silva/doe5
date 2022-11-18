@@ -20,7 +20,7 @@ if($result->num_rows > 0){
             // Se usuário é administrador
             if(!is_null($row['idAdmin'])){
                 // Leva para tela de admin
-                header("Location: ban_screen.php");
+                header("Location: admin_screen.php");
                 exit();
                 break;
             }
