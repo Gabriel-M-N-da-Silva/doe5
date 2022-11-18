@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="./assets/resulttable.css">
     </head>
     <body>
+        <!-- Barra de pesquisa -->
         <form method="GET" action="" name="form">
             <input type="search" name="nomePes" id="nomePes">
         </form>
@@ -16,15 +17,15 @@
 include('conn.php');
 include('session_start.php');
 
-
+// Nome do usuário que será pesquisado
 $nomePes= isset($_GET['nomePes']) ? $_GET['nomePes'] : "";
+
+//Select dos usuários com nome parecido com $nomePes
 $sql    = "SELECT * FROM TBUsuario WHERE nome LIKE '".$nomePes."%';";
 $result = $conn->query($sql);
-$nome   = isset($_GET["nome"]) ? $_GET["nome"] : "";
-$email  = isset($_GET["email"]) ? $_GET["email"]: "";
 
+//Print do BD
 if($result->num_rows > 0){
-    //Output data of each row
     echo "<table>
             <tr>
                 <th>ID</th>
@@ -43,8 +44,6 @@ if($result->num_rows > 0){
                 "</td>
             </tr>
         ";
-        
-        //echo "<br>ID: ".$row['id']."Nome: ".$row['nome'];
     }
     echo "</table>";
 } else {

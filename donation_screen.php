@@ -1,11 +1,12 @@
 <html>
     <head>
         <title>Doe 5</title>
-        <link rel="stylesheet" href="./assets/ban.css">
+        <link rel="stylesheet" href="./assets/banv1.css">
+        <!-- <link rel="stylesheet" href="./assets/ban.css"> -->
     </head>
     
     
-    
+    <!-- Barra de pesquisa de doações realizadas -->
     <h2>Doações realizadas</h2>
     <form name='search' action='' method='get'>
         <div>
@@ -15,11 +16,14 @@
         </div>
     </form>
 
+
 <?php
     include('conn.php');
     session_start();
 
+    // Nome da instituição sendo procurada 
     $instituicao = isset($_GET['instituicao'])? $_GET['instituicao'] : "";
+    // Select do id da doação, nome da instituição-destino e centro de captação destino
     $sqlPes= "SELECT 
                 D.idDoacao,
                 I.razaoSocial,
@@ -35,12 +39,13 @@
               "     AND
                     I.razaoSocial LIKE '".$instituicao."%'
               GROUP BY D.idDoacao";
-              
+    
+    // Resultado do select
     $resultPes = $conn->query($sqlPes);
 
-    //Output table with the $sqlPes result
+    //Print do banco de dados
     if($resultPes->num_rows > 0){
-        //Output data of each row
+        //Print do header da tabela
         echo "
             <table>
                 <tr>

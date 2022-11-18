@@ -1,11 +1,12 @@
 <?php
     include('conn.php');
-    
     session_start();
     $_SESSION['Versao'] = 1;
+
+    //Dados de login
     $login = isset($_GET["login"]) ? $_GET["login"] : "";
     $senha = isset($_GET["senha"]) ? $_GET["senha"]: "";
-    
+
 ?>
 <html>
     <head>
@@ -14,8 +15,9 @@
         <link rel="stylesheet" href="./assets/style.css">
     </head>
     <body>
+
+        <!-- Formulário de login/senha -->
         <form action="login_action.php" method="get">
-        <!-- <form action="search.php" method="get"> -->
             <table>
                 <tr>
                     <td>
