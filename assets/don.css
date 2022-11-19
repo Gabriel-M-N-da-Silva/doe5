@@ -1,0 +1,73 @@
+@import url('./styles/fonts.css');
+
+*{
+    font-family: 'Inter', 'Sans-serif';
+    font-weight: 400;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+body {
+    padding: 100px 275px 100px 275px;
+    background-color: #1B0C44;
+}
+
+
+h2{
+    color: white;
+    font-size: 80px;
+}
+
+#form-search{
+    display: flex;
+    align-items: center;
+    margin: 50px 0px 75px 0px;
+    justify-content: space-between;
+}
+
+#barra-pesquisa{
+    font-size: 25px;
+    padding: 0px 0px 0px 30px;
+    border-radius: 100px;
+    height: 60px;
+    width: 53vw;
+}
+
+#btn-search{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+#btn-search svg{
+    height: 35px;
+    fill: red;
+}
+
+h6{
+    width: 50px;
+}
+
+#id{
+    width: 50px;
+    height: 25px;
+}
+
+#idTable{
+    text-align: center;
+}
+
+table{
+    margin:auto;
+    background-color: white;
+    width: 100%;
+}
+
+table, td{
+    border: 1px solid black;
+}
