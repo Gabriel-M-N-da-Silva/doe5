@@ -4,5 +4,9 @@ body {
 
 
 h2{
-    font-size: 40px;
+    font-size: 80px;
+}
+
+#barra-pesquisa{
+    background-color: red;
 }

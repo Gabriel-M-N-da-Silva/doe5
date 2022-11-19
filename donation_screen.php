@@ -1,17 +1,16 @@
 <html>
     <head>
         <title>Doe 5</title>
-        <link rel="stylesheet" href="./assets/banv1.css">
+        <link rel="stylesheet" href="./assets/banv2.css">
         <!-- <link rel="stylesheet" href="./assets/ban.css"> -->
     </head>
     
     
     <!-- Barra de pesquisa de doações realizadas -->
-    <h2>Doações realizadas</h2>
+    <h2>Doações</h2>
     <form name='search' action='' method='get'>
         <div>
-            <h6>Instituicao: </h6>
-            <input name='instituicao' autocomplete='off' type='searchbar'>
+            <input id="barra-pesquisa" name='instituicao' placeholder='Insira o nome da instituição' autocomplete='off' type='searchbar'>
             <input type='submit' value='Pesquisar'>
         </div>
     </form>
