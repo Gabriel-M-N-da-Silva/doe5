@@ -8,10 +8,12 @@
 }
 
 body {
-    padding: 100px 275px 100px 275px;
     background-color: #1B0C44;
 }
 
+section{
+    margin: 100px 275px 100px 275px;
+}
 
 h2{
     color: white;
@@ -30,7 +32,7 @@ h2{
     padding: 0px 0px 0px 30px;
     border-radius: 100px;
     height: 60px;
-    width: 53vw;
+    width: 52.5vw;
 }
 
 #btn-search{
@@ -42,6 +44,11 @@ h2{
     border-radius: 100%;
     width: 60px;
     height: 60px;
+    cursor: pointer;
+}
+
+#btn-search:hover svg{
+    fill: #3937B4;
 }
 
 #btn-search svg{
@@ -49,9 +56,83 @@ h2{
     fill: red;
 }
 
-h6{
-    width: 50px;
+.donation-info-item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px 0px 15px 25px;
+    border-radius: 25px;
+    max-height: 10em;
+    overflow: hidden;
 }
+
+#donation-info-local-group img{
+    margin: 10px 10px 10px 10px ;
+}
+
+#donation-info-local-group h4{
+    font-weight: bold;
+}
+
+#donation-info-local-group{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#donation-info-items-group{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    padding: 0px 30px 0px 0px ;
+    margin-left: 60px;
+}
+
+#donation-info-items-group ul{
+    width: 50%;
+    max-height: 15vh;
+    overflow: auto;
+}
+
+#donation-info-options-group{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+#donation-info-options-group a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 100%;
+}
+
+#donation-info-options-group .edit:hover svg{
+    fill: green;
+}
+
+#donation-info-options-group .delete:hover svg{
+    fill: red;
+}
+
+#donation-info-options-group .edit:hover{
+    border: 2px solid green;
+}
+
+#donation-info-options-group .delete:hover{
+    border: 2px solid red;
+}
+
+#donation-info-options-group a svg{
+    width: 25px;
+}
+
 
 #id{
     width: 50px;
@@ -68,6 +149,16 @@ table{
     width: 100%;
 }
 
-table, td{
+table{
     border: 1px solid black;
+}
+
+tr{
+    margin: 100px;
+    height: 15vh;
+}
+
+#not-found-message{
+    color: yellow;
+    text-align: center;
 }
