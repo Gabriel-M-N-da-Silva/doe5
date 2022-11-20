@@ -8,7 +8,7 @@
         <form method="GET" action="" name="form">
             <input type="search" name="nomePes" id="nomePes">
         </form>
-        <a href="ban_screen.php">Banir Usuário</a>
+        <a href="ban_screen_julio.php">Banir Usuário</a>
     </body>
 </html>
 

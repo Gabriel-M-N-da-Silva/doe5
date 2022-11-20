@@ -12,7 +12,8 @@ body {
 }
 
 section{
-    margin: 100px 275px 100px 275px;
+    background-color: red;
+    margin: 75px 275px 75px 275px;
 }
 
 h2{

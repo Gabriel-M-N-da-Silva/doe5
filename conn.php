@@ -1,7 +1,7 @@
 <?php
 $severname="localhost";
 $username ="gabrielmns";
-$password ="";
+$password ="Gabriel@2004";
 $dbname   ="doe5";
 
 //Conexão com banco de dados(BD) criada

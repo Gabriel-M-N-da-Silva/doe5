@@ -19,26 +19,6 @@
         </div>
         <input type="submit" value="Banir">
     </form>
-    
-    <!--Form de dados de REGISTRO DE BANIMENTO SENDO DELETADO - Apagar registro -->
-    <form name="ban" action="del_ban_action.php" method="get">
-        <h2>Deletar banimento</h2>
-        <div>
-            <!--Email do USUÁRIO que foi banido-->
-            <h6>Email: </h6>
-            <input name="emailAdd" type="email">
-        </div>
-        <div>
-            <h6>Data do banimento: </h6>
-            <input name="date" type="date">
-        </div>
-        <div>
-            <!--Id do admin que BANIU o usuário-->
-            <h6>ID admin: </h6>
-            <input name="idAdmin" type="number" min=1>
-        </div>
-        <input type="submit" value="Deletar banimento">
-    </form>
 
     <!--Form de dados de USUÁRIO recebendo UNBAN - Unban -->
     <form name="ban" action="unban_action.php" method="get">
@@ -83,12 +63,19 @@
         Select dos registros de banimento com emails
         similares ao inserido pelo usuário
     */
-    $sqlPes= "SELECT  DISTINCT id, nome, email 
-              FROM 
-              TBUsuario U
-              INNER JOIN TBBanimento B
-              ON U.id = B.idUsuario
-              WHERE U.email LIKE '".$email."%'";
+    $sqlPes= 
+            "SELECT 
+                DISTINCT B.idUsuario,
+                U.email,
+                B.idAdmin,
+                B.dataHoraBanimento,
+                B.motivo
+            FROM
+                TBBanimento B
+                INNER JOIN TBUsuario U
+                ON B.idUsuario = U.id
+            WHERE 
+                B.dataHoraUnban IS NULL;";
 
     //Executa o código sql acima ↑
     $resultPes = $conn->query($sqlPes);
@@ -101,19 +88,27 @@
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>    
-                    <th>Email</th>    
+                    <th>Email</th>
+                    <th>Motivo</th>
+                    <th>Admin</th>    
+                    <th>Data-hora banimento</th>    
+                    <th>Opções</th>     
                 </tr>";
 
         //Print de cada linha da tabela    
         while($row = $resultPes->fetch_assoc()){
             echo "
                 <tr>
-                    <td id='idTable'>".$row['id']   ."</td>
-                    <td>"             .$row['nome'] ."</td>
-                    <td>"             .$row['email']."</td>
+                    <td>".$row['idUsuario']        ."</td>
+                    <td>".$row['email']            ."</td>
+                    <td>".$row['motivo']           ."</td>
+                    <td>".$row['idAdmin']          ."</td>
+                    <td>".$row['dataHoraBanimento']."</td>
+                    <td>
+                        <a href='del_ban_action.php?deleteId=".$row['idUsuario']."&&"."deleteDataHoraBan=".$row['dataHoraBanimento']."'>deletar</a>
+                    </td>
                 </tr>
-            ";            
+            ";           
         }
         
         echo "</table>";
