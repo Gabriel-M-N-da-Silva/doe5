@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <h1>Cadastro de doação</h1>
+            <br method="post" action="cadastrar-enquete.php">
+                <select name="tipo"><!--Com base no banco(falta dinheiro q n ta no banco)-->
+                <option value="0">Item: </option> <!--If value 0, marca a caixa com * vermelho-->>
+                <option value="1">Roupa</option>
+                <option value="2">Material escolar</option>
+                <option value="3">Colchão</option>
+                <option value="4">Cobertor</option>
+                <option value="5">Mesa</option>
+                <option value="6">Sofá</option>
+                </select>
+                <h3>Adicionar descrição de item</h3>
+                Quantidade: <input type="text" name="qtd" size="20"/></br><!--Para todos-->>
+                Altura:     <input type="text" name="alt" size="20"/></br><!--Para Colchao,cobertor,mesa e sofa-->>
+                Largura:    <input type="text" name="lar" size="20"/></br><!--Para Colchao,cobertor,mesa e sofa-->>
+                Comprimento:<input type="text" name="com" size="20"/></br><!--Para Colchao,cobertor,mesa e sofa-->>
+                Tamanho:    <select name="tam_roupa"><!--Aparecer para roupa-->>\
+                                <option value="0">Selecionar:</option><!--If value 0, marca a caixa com * vermelho-->>
+                                <option value="1">Recem nascido</option>
+                                <option value="2">1 ano</option>
+                                <option value="3">PP</option>
+                                <option value="4">P</option>
+                                <option value="5">M</option>
+                                <option value="6">G</option>
+                                <option value="7">GG</option>
+                                <option value="8">GGG</option>
+                                </select>
+                <h3>Descrição adicional:</h3>
+                <input type="text" name="descr_enc" size="40" />
+                <h3>Adicionar encargo a doação:</h3>
+                <select name="engargo">
+                    <option value="0">Não</option> 
+                    <option value="1">Sim</option>
+                    <input type="text" name="descr_enc" size="40" /> <!--if value 1, ficar vermelho * na descrição-->>
+                </select>
+                
+        </form>
+        <input type="submit" value="Enviar" />
+    </body>
+</html>

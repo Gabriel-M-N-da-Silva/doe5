@@ -10,7 +10,7 @@ create database doe5;
 use doe5;
 
 create table TBUsuario(
-	id int primary key,
+	id int AUTO_INCREMENT primary key,
 	email varchar(150) unique,
 	senha varchar(50) not null,
 	nome varchar(1100) not null,

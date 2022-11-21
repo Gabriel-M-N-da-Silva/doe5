@@ -1,0 +1,90 @@
+@import url('./colors.css');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--blue-1-color);
+    overflow: hidden;
+}
+
+#main{
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+    background-color: var(--blue-2-color);
+    padding: 10vh 0vw 0px 10vw;
+}
+
+h2{
+    color: white;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 20px;
+    color: white;
+}
+
+h4 span{
+    color: red;
+}
+
+#form-donator-reg{
+    width: 85%;
+    height: 55%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40vh;
+}
+
+#div-line-1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input{
+    width: 100%;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: gray;
+}
+
+#btn-submit{
+    width: 50%;
+    font-weight: bold;
+    color: black;
+    width: 14vw;
+    height: 2em;
+    font-size: 25px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--cian-1-color);
+    cursor: pointer;
+    align-self: center;
+}
+
+#btn-submit:hover{
+    background-color: var(--cian-2-color);
+}

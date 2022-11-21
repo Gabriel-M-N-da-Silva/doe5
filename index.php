@@ -13,6 +13,7 @@
         <meta charset="utf-8">
         <title>Doe em 5</title>
         <link rel="stylesheet" href="./assets/loginv2.css">
+        <link rel="stylesheet" href="./assets/styles/header.css">
     </head>
     <body>
         <header>
@@ -44,9 +45,12 @@
                     <div id="div-entrar">
                         <input id="entrar" type="submit" value="entrar">
                     </div>
+                    <div id="div-options">
+                        <a class='second-option' href="donator_reg_screen.php">Cadastrar-se</a>
+                        <a class='second-option' href="#">Esqueceu a senha?</a>
+                    </div>
                 </form>
             </div>
         </main>
-
     </body>
 </html>

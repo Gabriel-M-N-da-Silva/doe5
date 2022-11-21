@@ -2,9 +2,15 @@
 
     <head>
         <title>Doe 5</title>
-        <link rel="stylesheet" href="./assets/banv1.css">
+        <link rel="stylesheet" href="./assets/styles/header.css">
     </head>
 
+    <header>
+        <a id="voltar"href="admin_screen.php">
+            <img src="./assets/imgs/voltar.svg" alt="Voltar">
+            <h1>Voltar</h1>
+        </a>
+    </header>
     <!--Form de dados de conta SENDO BANIDA - Banimento -->
     <form name="ban" action="add_ban_action.php" method="get">
         <h2>Banir usuário</h2>
