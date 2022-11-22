@@ -32,7 +32,7 @@
 
     //Inserção do usuário na tabela de banidos se email e motivo não forem vazios
     if($nome != "" && $emailAdd != "" && $senhaAdd != "" && $dataNasc != "" && ($senhaAdd == $senhaConfirm)){
-        if($conn->query($sqlAdd) === TRUE){
+        if($conn->query($sqlAdd)){
             echo "<h1><span id='success'>Sucesso!</span><br>Usuário cadastrado</h1>";
         } else{
             echo "<h1><span id='unsuccess'>Erro!</span><br>Não foi possível cadastrar usuário " . $conn->error . "</h1>";

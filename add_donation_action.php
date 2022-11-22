@@ -10,7 +10,7 @@
     VALUES (
         ".$_SESSION['idUsuario'].",
         ".$item1Tipo.",
-        1,
+        3,
         11,
         ".$item1Qtd.",
         null,
@@ -39,7 +39,7 @@
         VALUES (
             ".$_SESSION['idUsuario'].",
             ".$item2Tipo.",
-            1,
+            3,
             11,
             ".$item2Qtd.",
             null,
@@ -72,7 +72,7 @@
             VALUES (
                 ".$_SESSION['idUsuario'].",
                 ".$item3Tipo.",
-                1,
+                3,
                 11,
                 ".$item3Qtd.",
                 null,
@@ -108,6 +108,6 @@
     </head>
     <body>
         <br>
-        <a id="return-login" href="index.php">Retornar para doações</a>
+        <a id="return-login" href="donation_screen.php">Retornar para doações</a>
     </body>
 </html>

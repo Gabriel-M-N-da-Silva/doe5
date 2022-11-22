@@ -155,7 +155,9 @@
                         ?>
                     </select>
                 </div>
-                <input id='btn-submit' type="submit" value="Enviar"/>
+                <div id="submit">
+                    <input id='btn-submit' type="submit" value="Enviar"/>
+                </div>
             </form>
         </section>
     </body>

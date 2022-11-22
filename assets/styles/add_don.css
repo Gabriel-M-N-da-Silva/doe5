@@ -42,7 +42,8 @@ h2{
 #form-add-don{
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    align-items: center;
+    justify-content: center;
 }
 
 #don-items{
@@ -98,7 +99,12 @@ h2{
     height: 50px;
 }
 
-
+#submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
 
 #btn-submit{
     font-weight: bold;
