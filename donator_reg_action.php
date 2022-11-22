@@ -12,17 +12,17 @@
     $senhaConfirm = isset($_GET['confirmaSenha'])? $_GET['confirmaSenha'] : "";
     
     //Telefone do usuário cadastrado
-    $phone = isset($_GET['fone'])? $_GET['fone'] : NULL;
+    $phone = isset($_GET['fone'])? $_GET['fone'] : 'NULL';
 
     //Data de nascimento
     $dataNasc = $_GET['dataNasc'];
     
     //Endereço do usuário
-    $rua = isset($_GET['street'])? $_GET['street'] : NULL;
-    $complemento =isset($_GET['complement'])? $_GET['complement'] : NULL;
-    $numero = isset($_GET['number'])? $_GET['number'] : NULL;
-    $bairro = isset($_GET['neighborhood'])? $_GET['neighborhood'] : NULL;
-    $cidade = isset($_GET['city'])? $_GET['city'] : NULL;
+    $rua = isset($_GET['street'])? $_GET['street'] : 'NULL';
+    $complemento =isset($_GET['complement'])? $_GET['complement'] : 'NULL';
+    $numero = isset($_GET['number'])? $_GET['number'] : 'NULL';
+    $bairro = isset($_GET['neighborhood'])? $_GET['neighborhood'] : 'NULL';
+    $cidade = isset($_GET['city'])? $_GET['city'] : 'NULL';
 
 
     $ultimoId = $conn->query("SELECT id FROM TBUsuario order by id desc limit 1;");

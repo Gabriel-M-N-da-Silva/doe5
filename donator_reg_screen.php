@@ -34,8 +34,8 @@
                             <input name="fone" type="tel" pattern="^[0-9]{11}$" placeholder="41998765432">
                         </div>
                         <div class="input-field">
-                            <h4>Rua: </h4>
-                            <input name="street" type="text" placeholder="Rua Imac. Conceição">
+                            <h4>Rua:<span>*</span> </h4>
+                            <input required name="street" type="text" placeholder="Rua Imac. Conceição">
                         </div>
                         <div class="input-field">
                             <h4>Complemento: </h4>
@@ -64,19 +64,19 @@
                             <input required name="dataNasc" type="date" required>
                         </div>
                         <div class="input-field">
-                            <h4>Número: </h4>
-                            <input name="number" type="text" placeholder="123B">
+                            <h4>Número:<span>*</span> </h4>
+                            <input required name="number" type="text" placeholder="123B">
                         </div>
                         <div class="input-field">
-                            <h4>Bairro: </h4>
-                            <input name="neighborhood" type="text" placeholder="Prado Velho">
+                            <h4>Bairro:<span>*</span> </h4>
+                            <input required name="neighborhood" type="text" placeholder="Prado Velho">
                         </div>
                     </div>
                 </div>
                 <div id="div-line-2">
                     <div id="div-select-city" class="col">
-                        <h4>Cidade: </h4>
-                        <select name="city" id="select-city">
+                        <h4>Cidade:<span>*</span> </h4>
+                        <select required name="city" id="select-city">
                             <option value="" disabled selected>Cidade:</option>
                             <?php
                                 include('conn.php');
