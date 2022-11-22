@@ -1,4 +1,4 @@
-@import url('./colors.css');
+@import url('../src/colors.css');
 
 *{
     padding: 0px;

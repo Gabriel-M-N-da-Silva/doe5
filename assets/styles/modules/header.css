@@ -1,4 +1,4 @@
-@import url("./styles/fonts.css");
+@import url("../src/fonts.css");
 
 *{
     font-family: 'Inter', sans-serif;

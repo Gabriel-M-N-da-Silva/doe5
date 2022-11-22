@@ -1,5 +1,5 @@
 <?php
-    include('conn.php');
+    include('./php/src/conn.php');
     session_start();
     $_SESSION['Versao'] = 1;
 
@@ -12,8 +12,8 @@
     <head>
         <meta charset="utf-8">
         <title>Doe em 5</title>
-        <link rel="stylesheet" href="./assets/loginv2.css">
-        <link rel="stylesheet" href="./assets/styles/header.css">
+        <link rel="stylesheet" href="./assets/styles/screens/login.css">
+        <link rel="stylesheet" href="./assets/styles/modules/header.css">
     </head>
     <body>
         <header>
@@ -30,23 +30,23 @@
     
             <div id="direita">
                 <!-- Formulário de login/senha -->
-                <form id="form-login" action="login_action.php" method="get">
+                <form id="form-login" action="./php/actions/login_action.php" method="get">
                     
                     <h2>LOGIN</h2>
                 
                     <div class="form-login-input">
                         <h4>Email: <span>*</span></h4>
-                        <input placeholder="exemplo@gmail.com" type="email" name="login" value="<?=$login?>">
+                        <input required placeholder="exemplo@gmail.com" type="email" name="login" value="<?=$login?>">
                     </div>
                     <div class="form-login-input">
                         <h4>Senha: <span> * </span></h4>
-                        <input placeholder="doe_5@" type="password" name="senha" value="<?=$senha?>">    
+                        <input required placeholder="doe_5@" type="password" name="senha" value="<?=$senha?>">    
                     </div>
                     <div id="div-entrar">
                         <input id="entrar" type="submit" value="entrar">
                     </div>
                     <div id="div-options">
-                        <a class='second-option' href="donator_reg_screen.php">Cadastrar-se</a>
+                        <a class='second-option' href="./php/screens/donator_reg_screen.php">Cadastrar-se</a>
                         <a class='second-option' href="#">Esqueceu a senha?</a>
                     </div>
                 </form>

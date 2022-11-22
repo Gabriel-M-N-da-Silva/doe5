@@ -1,5 +1,5 @@
-@import url('./fonts.css');
-@import url('./colors.css');
+@import url('../../styles/src/fonts.css');
+@import url('../../styles/src/colors.css');
 
 *{
     padding: 0;
@@ -70,6 +70,7 @@ body{
     background: transparent;
     border: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #ban-option:hover{
