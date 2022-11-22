@@ -33,11 +33,12 @@
         <title>Doe em 5</title>
         <link rel="stylesheet" href="./assets/styles/header.css">
         <link rel="stylesheet" href="./assets/styles/profile_page.css">
+        <link rel="stylesheet" href="./assets/styles/modal.css">
     </head>
     <body>
         
         <header>
-            <a id="voltar" aria-label="Voltar para página anterior" href="admin_screen.php">
+            <a id="voltar" aria-label="Voltar para página anterior" href="manage_users.php">
                 <img src="./assets/imgs/voltar.svg" alt="Voltar">
                 <h1>Voltar</h1>
             </a>
@@ -47,10 +48,10 @@
             <section id="sidebar">
                 <div id='profile-side'>
                     <img id="profile-photo" src="./assets/imgs/usuario.svg" alt="Foto de perfil">
-                    <p>Status da conta: <?php echo $status?></p>
+                    <p>Status: <?php echo $status?></p>
                 </div>
                 <div id="options">
-                    <a id="ban-option" href="#"> Banir usuário</a>
+                    <button id="ban-option"> Banir usuário</button>
                 </div>
             </section>
             <section id="container">
@@ -72,5 +73,49 @@
                 </div>
             </section>
         </section>
+
+        <div class="hidden" id="modal-container">
+            <div id="modal">
+                <button id='btn-close' onclick="showModal">X</button>
+                <h4>Motivo de banimento:</h4>
+                <form action="ban_action.php">
+                    <input name='idUser' type="text" value='<?php echo $idUser?>' hidden>
+                    <textarea required placeholder="Descreva o motivo do banimento" name="reason" id="txtarea-reason" cols="30" rows="10" style="resize: none;"></textarea>
+                    <button id="btn-ban" type="submit">Banir</button>
+                </form>
+            </div>
+        </div>
     </body>
+
+    <script>
+        let banBtn = document.querySelector('#ban-option');
+        
+        // banBtn.addEventListener('click', (e)=>{
+        //     showModal(e);
+        // });
+        
+        // btnClose.addEventListener('click', (e)=>{
+        //     showModal(e);
+        // });
+
+        
+        
+        function showModal(modalId){
+            let modal = document.getElementById(modalId);
+            console.log(modal)
+            
+            if(modal){
+                modal.classList.add('show');
+                modal.addEventListener('click', (e)=>{
+                    if(e.target.id == modalId || e.target.id == 'btn-close'){
+                        modal.classList.remove('show')
+                        modal.classList.add('hidden')
+                    }
+                })
+            }
+        }
+
+        banBtn.addEventListener('click', ()=>showModal('modal-container'))
+
+    </script>
 </html>

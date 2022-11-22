@@ -65,7 +65,10 @@ body{
 }
 
 #ban-option{
+    font-size: 15px;
     color: red;
+    background: transparent;
+    border: none;
     text-decoration: none;
 }
 
