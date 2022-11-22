@@ -123,10 +123,12 @@ h2{
 }
 
 #donation-info-options-group .edit:hover{
+    transition: all 0.5s;
     border: 2px solid green;
 }
 
 #donation-info-options-group .delete:hover{
+    transition: all 0.5s;
     border: 2px solid red;
 }
 
@@ -176,6 +178,7 @@ tr{
     height: 5em;
     border-radius: 100%;
     border: 5px solid white;
+    transition: all 0.5s;
 }
 
 #add-new-donation:hover {
@@ -183,9 +186,11 @@ tr{
     height: 6.25em;
     bottom: 40px;
     right: 40px;
+    transition: all 0.5s;
 }
 
 #add-new-donation:hover svg {
+    transition: all 0.75s;
     width: 5em;
     height: 5em;
 }
