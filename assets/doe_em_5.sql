@@ -1391,23 +1391,8 @@ INSERT INTO TBItemDoacao
 
 
 
-INSERT INTO TBDoacao 
-    VALUES (
-        4,
-        1,
-        1,
-        11,
-        9,
-        null,
-        null,
-        null,
-        null,  
-        "2022-05-05 14:57",
-        "2022-05-05 14:57",
-        "2022-05-05 15:06",
-        "2022-05-05 15:06",
-        True
-    );
+                    <h3>👁️‍🗨️ Observações:</h3>
+
 
 INSERT INTO TBDoacao 
     VALUES (
