@@ -12,11 +12,18 @@
     $senhaConfirm = isset($_GET['confirmaSenha'])? $_GET['confirmaSenha'] : "";
     
     //Telefone do usuário cadastrado
-    $phone = isset($_GET['fone'])? $_GET['fone'] : "";
+    $phone = isset($_GET['fone'])? $_GET['fone'] : NULL;
 
     //Data de nascimento
-    $dataNasc = isset($_GET['dataNasc'])? $_GET['dataNasc'] : "";
+    $dataNasc = $_GET['dataNasc'];
     
+    //Endereço do usuário
+    $rua = isset($_GET['street'])? $_GET['street'] : NULL;
+    $complemento =isset($_GET['complement'])? $_GET['complement'] : NULL;
+    $numero = isset($_GET['number'])? $_GET['number'] : NULL;
+    $bairro = isset($_GET['neighborhood'])? $_GET['neighborhood'] : NULL;
+    $cidade = isset($_GET['city'])? $_GET['city'] : NULL;
+
 
     $ultimoId = $conn->query("SELECT id FROM TBUsuario order by id desc limit 1;");
 
@@ -28,11 +35,15 @@
     }
     
     //Script da inserção do usuário na tabela de banidos
-    $sqlAdd= "INSERT INTO TBUsuario VALUES('".$id."','".$emailAdd."','".$senhaAdd."','".$nome."','".$phone."','".$dataNasc."')";
+    $sqlAddUserTable   = "INSERT INTO TBUsuario VALUES(".$id.",'".$emailAdd."','".$senhaAdd."','".$nome."','".$phone."','".$dataNasc."');";
+    $sqlAddDonatorTable= "INSERT INTO TBDoador VALUES(".$id.",'".$rua."','".$numero."','".$complemento."','".$bairro."',".$cidade.");";
+
+    $insert1 = $conn->query($sqlAddUserTable);
+    $insert2 = $conn->query($sqlAddDonatorTable);
 
     //Inserção do usuário na tabela de banidos se email e motivo não forem vazios
     if($nome != "" && $emailAdd != "" && $senhaAdd != "" && $dataNasc != "" && ($senhaAdd == $senhaConfirm)){
-        if($conn->query($sqlAdd)){
+        if($insert1 && $insert2){
             echo "<h1><span id='success'>Sucesso!</span><br>Usuário cadastrado</h1>";
         } else{
             echo "<h1><span id='unsuccess'>Erro!</span><br>Não foi possível cadastrar usuário " . $conn->error . "</h1>";

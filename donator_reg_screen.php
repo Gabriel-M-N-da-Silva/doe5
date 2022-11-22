@@ -23,30 +23,72 @@
                     <div class="col">
                         <div class="input-field">
                             <h4>Nome: <span>*</span></h4>
-                            <input name="nome" type="text" placeholder="John Doe">
+                            <input required name="nome" type="text" placeholder="John Doe">
                         </div>    
                         <div class="input-field">
                             <h4>Email: <span>*</span></h4>
-                            <input name="emailAdd" type="text" placeholder="exemplo@doe5.com">
+                            <input required name="emailAdd" type="text" placeholder="exemplo@doe5.com">
                         </div>
                         <div class="input-field">
                             <h4>Telefone: </h4>
                             <input name="fone" type="tel" pattern="^[0-9]{11}$" placeholder="41998765432">
                         </div>
+                        <div class="input-field">
+                            <h4>Rua: </h4>
+                            <input name="street" type="text" placeholder="Rua Imac. Conceição">
+                        </div>
+                        <div class="input-field">
+                            <h4>Complemento: </h4>
+                            <input name="complement" type="text" placeholder="Apartamento 404">
+                        </div>
                     </div>
+
+
+
+                    <br>
+                    <hr>
+                    <br>
+
+
                     <div class="col">
                         <div class="input-field">
                             <h4>Senha: <span>*</span></h4>
-                            <input name="senhaAdd" type="password" placeholder="Doe@eM%5">
+                            <input required name="senhaAdd" type="password" placeholder="Doe@eM%5">
                         </div>    
                         <div class="input-field">
                             <h4>Confirmação de senha: <span>*</span></h4>
-                            <input name="confirmaSenha" type="password" placeholder="Doe@eM%5">
+                            <input required name="confirmaSenha" type="password" placeholder="Doe@eM%5">
                         </div>
                         <div class="input-field">
                             <h4>Data de nascimento: <span>*</span></h4>
-                            <input name="dataNasc" type="date" required>
+                            <input required name="dataNasc" type="date" required>
                         </div>
+                        <div class="input-field">
+                            <h4>Número: </h4>
+                            <input name="number" type="text" placeholder="123B">
+                        </div>
+                        <div class="input-field">
+                            <h4>Bairro: </h4>
+                            <input name="neighborhood" type="text" placeholder="Prado Velho">
+                        </div>
+                    </div>
+                </div>
+                <div id="div-line-2">
+                    <div id="div-select-city" class="col">
+                        <h4>Cidade: </h4>
+                        <select name="city" id="select-city">
+                            <option value="" disabled selected>Cidade:</option>
+                            <?php
+                                include('conn.php');
+                                $sqlCity = "SELECT id, cidade FROM TBCidade";
+                                $result = $conn->query($sqlCity);
+
+                                while($row = $result->fetch_assoc()){
+                                    echo "<option value=".$row['id'].">".$row['cidade']."</option>";
+                                }
+                            
+                            ?>
+                        </select>
                     </div>
                 </div>
                 <input id='btn-submit'type="submit" value="Cadastrar">
